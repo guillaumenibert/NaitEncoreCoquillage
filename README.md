@@ -12,13 +12,13 @@ Add post-configuration scripts
 
 ## config_vps_server.sh (based on Ubuntu Server 18.04.2 LTS)
 
-Docker
+- Docker
 
-Apache
-PostgreSQL, MySQL or MariaDB ?
+- Apache
+- PostgreSQL, MySQL or MariaDB ?
 
-Gitlab + Mattermost
+- Gitlab + Mattermost
 
-HTTPS : Certbot with Let's Encrypt
+- HTTPS : Certbot with Let's Encrypt
 
-Optional : Webmail
+- Optional : Webmail
