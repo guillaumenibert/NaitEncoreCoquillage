@@ -1,6 +1,6 @@
 # TODO
 
-## postubuntu_perso.sh
+## postinstall_ubuntu_perso.sh
 
 Add post-configuration scripts
 
