@@ -32,7 +32,7 @@ Test DoH and eSNI : https://www.cloudflare.com/ssl/encrypted-sni/
 https://blog.plip.com/2018/04/22/stubby-pi-hole-quad9-lxd/
 
 
-# Enable TLS 1.3
+# Enable support of TLS 1.3 (client side)
 
 ## Mozilla Firefox (Desktop and Android, not tested on iOS)
 
@@ -51,7 +51,7 @@ TLS 1.3 downgrade hardening;Default
 
 Test TLS 1.3 : https://www.cloudflare.com/ssl/encrypted-sni/
 
-# Enable AV1
+# Enable AV1 (client side)
 
 ## Mozilla Firefox (Desktop and Android, not tested on iOS)
 
