@@ -33,6 +33,5 @@ On Apache and Nginx
 
 - Let's Encrypt : RSA 4096
 
-- Unbound DNS Server + DNS over TLS
-
+Unbound DNS Server + DNS over TLS
 /!\ DNS over HTTPS with Cloudflare
