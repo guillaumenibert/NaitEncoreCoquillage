@@ -33,9 +33,13 @@ https://blog.plip.com/2018/04/22/stubby-pi-hole-quad9-lxd/
 
 # DNS over TLS (from Quad9)
 
-## Android (min 9)
+## Android >= 9
 
 https://www.quad9.net/private-dns-quad9-android9/
+
+## Android < 9
+
+Use Intra with DNS over HTTPS : https://www.quad9.net/doh-quad9-dns-servers/
 
 # Enable support of TLS 1.3 (client side)
 
