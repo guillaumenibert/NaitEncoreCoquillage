@@ -1,0 +1,48 @@
+# DRAFT - Synapse using Apache proxy and PostgreSQL (maybe switching to nginx later)
+
+1 - Server hardening
+
+2 - Matrix synapse
+
+3 - Let's Encrypt
+
+certbot certonly --rsa-key-size 4096 --standalone --agree-tos --no-eff-email --email famous@email.kawai -d domain.name
+
+renew later...
+
+3 - Apache config
+
+<VirtualHost *:443>
+servername domain.name
+      ServerAlias domain.name
+        Redirect permanent / https://domain.name
+
+        RewriteEngine off
+        #RewriteRule /login.view[/]?$ /login.view [R=permanent]
+
+        SSLEngine on
+        SSLCertificateFile /etc/letsencrypt/live/domain.name/fullchain.pem
+        SSLCertificateKeyFile /etc/letsencrypt/live/domain.name/privkey.pem
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+        ProxyRequests On
+        ProxyPreserveHost Off
+        <Proxy *>
+        Order allow,deny
+        Allow from all
+        </Proxy>
+
+        ProxyPassReverse / http://127.0.0.1:8008/ nocanon
+        ProxyPass / http://127.0.0.1:8008/ nocanon
+</Virtualhost>
+
+<VirtualHost *:80>
+        ServerAlias domain.name
+        Redirect permanent / https://domain.name/
+</Virtualhost>
+
+sudo a2enmod rewrite ssl proxy proxy_http headers
+
+sudo a2ensite domain.name
+
+sudo systemctl restart apache2
