@@ -27,11 +27,12 @@ Add post-configuration scripts
 ## SECURITY
 
 On Apache and Nginx
-HTTP2 Protocol
-TLS 1.3 + Disable all SSL versions and all TLS versions < 1.1
-SSL Cipher
+- HTTP2 Protocol
+- TLS 1.3 + Disable all SSL versions and all TLS versions < 1.1
+- SSL Cipher
 
-Let's Encrypt : RSA 4096
+- Let's Encrypt : RSA 4096
 
-Unbound DNS Server + DNS over TLS
+- Unbound DNS Server + DNS over TLS
+
 /!\ DNS over HTTPS with Cloudflare
