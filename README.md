@@ -10,7 +10,7 @@ Add post-configuration scripts
 - Adapt the installer script to Raspbian based on Debian Duster.
 - Install drivers for ZWave Plus and ZigBee communication protocols.
 
-## config_vps_server.sh (based on Ubuntu Server 18.04.2 LTS)
+## config_vps_server.sh (based on Ubuntu Server 18.04 LTS)
 
 - Docker
 
