@@ -28,7 +28,7 @@ Add post-configuration scripts
 
 On Apache and Nginx
 - HTTP2 Protocol
-- TLS 1.3 + Disable all SSL versions and all TLS versions < 1.1
+- TLS 1.3 + Disable all SSL versions and all TLS versions < 1.2
 - SSL Cipher
 
 - Let's Encrypt : RSA 4096
