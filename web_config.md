@@ -25,7 +25,7 @@ Don't use Chromium-based browsers !
 
 https://github.com/bromite/bromite/wiki/Enabling-DNS-over-HTTPS
 
-Test DoH and eSNI : https://www.cloudflare.com/ssl/encrypted-sni/
+### Test DoH and eSNI : https://www.cloudflare.com/ssl/encrypted-sni/
 
 ## TO DO
 
@@ -49,7 +49,7 @@ TLS 1.3 Early Data;Default
 TLS 1.3 downgrade hardening;Default
 ```
 
-Test TLS 1.3 : https://www.cloudflare.com/ssl/encrypted-sni/
+### Test TLS 1.3 : https://www.cloudflare.com/ssl/encrypted-sni/
 
 # Enable AV1 (client side)
 
@@ -68,4 +68,4 @@ media.av1.use-dav1d;true
 chrome://flags/#enable-av1-decoder
 ```
 
-Turn on AV1 on YouTube : https://www.youtube.com/testtube
+### Turn on AV1 on YouTube : https://www.youtube.com/testtube
