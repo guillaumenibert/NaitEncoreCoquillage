@@ -73,5 +73,5 @@ cd
 # Installation des paquets
 apt install vlc codium riot-web libreoffice libreoffice-l10n-fr libreoffice-help-fr thunderbird thunderbird-locale-fr skypeforlinux filezilla brave-browser balena-etcher-electron default-jre synaptic -y
 
-# Développer en Java
-apt install default-jdk -y
+# Développer en Python, C, C++ et Java
+apt install python3 gcc g++ default-jdk -y
