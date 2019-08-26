@@ -71,7 +71,7 @@ rm "discord.deb"
 cd
 
 # Installation des paquets
-apt install vlc codium riot-web libreoffice libreoffice-l10n-fr libreoffice-help-fr thunderbird thunderbird-locale-fr skypeforlinux filezilla wire-desktop spotify-client brave-browser balena-etcher-electron default-jre synaptic -y
+apt install vlc codium riot-web libreoffice libreoffice-l10n-fr libreoffice-help-fr thunderbird thunderbird-locale-fr skypeforlinux filezilla brave-browser balena-etcher-electron default-jre synaptic -y
 
 # Développer en Java
 apt install default-jdk -y
