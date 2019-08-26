@@ -29,19 +29,17 @@ add-apt-repository ppa:ubuntuhandbook1/audacity -y
 #add-apt-repository ppa:stebbins/handbrake-releases -y
 ###########################################################
 
-## Visual Studio Code
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+## VSCodium
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add - 
+echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list 
 ## Skype
 curl https://repo.skype.com/data/SKYPE-GPG-KEY | sudo apt-key add -
 echo "deb [arch=amd64] https://repo.skype.com/deb stable main" | sudo tee /etc/apt/sources.list.d/skype-stable.list
-## Wire
-wget -q https://wire-app.wire.com/linux/releases.key -O- | sudo apt-key add -
-echo "deb [arch=amd64] https://wire-app.wire.com/linux/debian stable main" | sudo tee /etc/apt/sources.list.d/wire-desktop.list
+
 ## Spotify
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90 2EBF997C15BDA244B6EBF5D84773BD5E130D1D45
-echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+## apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90 2EBF997C15BDA244B6EBF5D84773BD5E130D1D45
+## echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
 ## Brave
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 source /etc/os-release
@@ -49,6 +47,14 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_C
 ## Etcher
 echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
+## Riot.im
+sudo apt install -y lsb-release wget apt-transport-https
+sudo wget -O /usr/share/keyrings/riot-im-archive-keyring.gpg https://packages.riot.im/debian/riot-im-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/riot-im-archive-keyring.gpg] https://packages.riot.im/debian/ $(lsb_release -cs) main" |
+    sudo tee /etc/apt/sources.list.d/riot-im.list
+## Signal
+curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 
 # Mise à jour des dépots
 apt update
@@ -65,7 +71,7 @@ rm "discord.deb"
 cd
 
 # Installation des paquets
-apt install vlc code libreoffice libreoffice-l10n-fr libreoffice-help-fr thunderbird thunderbird-locale-fr skypeforlinux filezilla wire-desktop spotify-client brave-browser balena-etcher-electron default-jre synaptic -y
+apt install vlc codium riot-web libreoffice libreoffice-l10n-fr libreoffice-help-fr thunderbird thunderbird-locale-fr skypeforlinux filezilla wire-desktop spotify-client brave-browser balena-etcher-electron default-jre synaptic -y
 
 # Développer en Java
 apt install default-jdk -y
