@@ -12,8 +12,6 @@ Add post-configuration scripts
 
 ## config_vps_server.sh (based on Ubuntu Server 18.04 LTS)
 
-- Docker
-
 - Apache
 - PostgreSQL, MySQL or MariaDB ?
 
@@ -35,3 +33,12 @@ On Apache and Nginx
 
 Unbound DNS Server + DNS over TLS
 /!\ DNS over HTTPS with Cloudflare
+
+## OPERATION SMA-ACTIVE
+
+- Docker
+- Let's Encrypt : Elliptic Curve
+- Nextcloud
+- OAuth
+- NVIDIA Jetson
+- Update scripts
