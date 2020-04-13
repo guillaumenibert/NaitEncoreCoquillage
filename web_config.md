@@ -2,18 +2,15 @@
 
 ## Mozilla Firefox (Desktop and Android, not tested on iOS)
 
-Temporarily using DoH from Quad9.
+Temporarily using DoH from the Foundation for Applied Privacy.
 
 Parameters :
 
 ```
-network.trr.bootstrapAddress;9.9.9.9
+network.trr.mode;2
 ```
 ```
-network.trr.mode;3
-```
-```
-network.trr.uri;https://dns.quad9.net/dns-query
+network.trr.uri;https://doh.applied-privacy.net/query
 ```
 ```
 network.security.esni.enabled;true
@@ -31,15 +28,15 @@ https://github.com/bromite/bromite/wiki/Enabling-DNS-over-HTTPS
 
 https://blog.plip.com/2018/04/22/stubby-pi-hole-quad9-lxd/
 
-# DNS over TLS (from Quad9)
+# DNS over TLS (from the Foundation for Applied Privacy)
 
 ## Android >= 9
 
-https://www.quad9.net/private-dns-quad9-android9/
+DoT : dot1.applied-privacy.net
 
 ## Android < 9
 
-Use Intra with DNS over HTTPS : https://www.quad9.net/doh-quad9-dns-servers/
+Use Intra with DNS over HTTPS : Android : dot1.applied-privacy.net
 
 # Enable support of TLS 1.3 (client side)
 
@@ -77,4 +74,8 @@ media.av1.use-dav1d;true
 chrome://flags/#enable-av1-decoder
 ```
 
-### Turn on AV1 on YouTube : https://www.youtube.com/testtube
+# Privacy
+
+https://www.privacytools.io/
+
+https://textup.fr/277731WL (credits : LBD22)

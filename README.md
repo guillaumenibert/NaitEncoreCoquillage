@@ -1,8 +1,9 @@
 # TODO
 
-## postinstall_ubuntu_perso.sh (based on Ubuntu 19.04 Desktop)
+## postinstall_ubuntu_perso.sh and postinstall_ubuntu_perso_minimal.sh
 
-Add post-configuration scripts
+Added compatibility for Ubuntu 20.04 LTS.
+Added a minimal version of the script for old PCs.
 
 ## jeedom_raspbian.sh (based on Raspbian Duster 10 Lite)
 
@@ -13,7 +14,7 @@ Add post-configuration scripts
 ## config_vps_server.sh (based on Ubuntu Server 18.04 LTS)
 
 - Apache
-- PostgreSQL, MySQL or MariaDB ?
+- PostgreSQL -> MySQL -> MariaDB
 
 - Gitlab + Mattermost
 

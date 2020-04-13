@@ -1,6 +1,6 @@
 #!/bin/bash
 # ================================================================
-# Title : Postinstall Ubuntu Perso
+# Title : Postinstall Ubuntu Perso (minimal)
 # Author : Guillaume Nibert
 # Version : 2.0
 # Compatibility : Ubuntu 18.04 LTS, 18.10, 19.04, 19.10, 20.04 LTS
@@ -10,9 +10,6 @@
 #
 #     Security :
 #       - Removed Discord, Skype and Riot.im.
-#       - Added Flatpak packages.
-#     Development :
-#       - Added Jetbrains CLion, PyCharm and IDEA snap packages.
 #     Compatibility : Added Ubuntu 20.04 LTS support.
 # ================================================================
 
@@ -45,34 +42,17 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable ma
 echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
 apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 379CE192D401AB61
 
-## Lutris
-add-apt-repository ppa:lutris-team/lutris -y
-
-## OBS Studio
-add-apt-repository ppa:obsproject/obs-studio -y
-
-## Veracrypt
-add-apt-repository ppa:unit193/encryption -y
-
 # Update of the package lists
 apt update
 
 # Installation of the following packages
-apt install audacity mumble vlc codium libreoffice libreoffice-l10n-fr libreoffice-help-fr \
+apt install audacity vlc codium libreoffice libreoffice-l10n-fr libreoffice-help-fr \
 thunderbird thunderbird-locale-fr filezilla brave-browser balena-etcher-electron default-jre \
-synaptic cheese flatpak gufw handbrake chrome-gnome-shell gnome-clocks keepassxc lutris \
-mkvtoolnix mkvtoolnix-gui ffmpeg obs-studio qbittorrent rhythmbox totem totem-plugins \
-veracrypt virtualbox virtualbox-qt virtualbox-dkms torbrowser-launcher -y
+synaptic cheese gufw chrome-gnome-shell gnome-clocks rhythmbox totem totem-plugins \
+torbrowser-launcher -y
 
 # Development tools in Python, C, C++ and Java
 apt install python3 gcc g++ default-jdk -y
-
-# Snap packages
-snap refresh
-snap install mattermost-desktop glimpse-editor
-snap install intellij-idea-ultimate --classic
-snap install pycharm-professional --classic
-snap install clion --classic
 
 # Comments
 # For security reasons, the use of Discord, Skype and Riot.im is done via a privacy-friendly
