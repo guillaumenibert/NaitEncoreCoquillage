@@ -76,6 +76,9 @@ chrome://flags/#enable-av1-decoder
 
 # Privacy
 
-https://www.privacytools.io/
+https://www.privacytools.io/ /!\ privacy.resistFingerprinting = true breaks some web apps (e.g. Jitsi Meet).
+https://vive-gnulinux.fr.cr/securiser-firefox/
+
+https://privacymachine.xyz/
 
 https://textup.fr/277731WL (credits : LBD22)
