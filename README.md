@@ -5,6 +5,11 @@
 Added compatibility for Ubuntu 20.04 LTS.
 Added a minimal version of the script for old PCs.
 
+TO DO :
+Mozilla Firefox -> Librewolf
+Brave Browser -> Ungoogled-chromium
+Palemoon
+
 ## jeedom_raspbian.sh (based on Raspbian Duster 10 Lite)
 
 - Install Jeedom.
