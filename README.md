@@ -6,7 +6,7 @@ Added compatibility for Ubuntu 20.04 LTS.
 Added a minimal version of the script for old PCs.
 
 TO DO :
-* Brave Browser -> Ungoogled-chromium
+* Brave Browser
 * Palemoon
 
 ## jeedom_raspbian.sh (based on Raspbian Duster 10 Lite)
@@ -18,14 +18,13 @@ TO DO :
 ## config_vps_server.sh (based on Ubuntu Server 18.04 LTS)
 
 - Apache
-- PostgreSQL -> MySQL -> MariaDB
+- PostgreSQL -> MongoDB
 
-- Gitlab + Mattermost
+- Gitlab
 
 - HTTPS : Certbot with Let's Encrypt
 
 - Optional : Webmail
-
 
 ## SECURITY
 
@@ -39,7 +38,14 @@ On Apache and Nginx
 Unbound DNS Server + DNS over TLS
 /!\ DNS over HTTPS with Cloudflare
 
-## OPERATION SMA-ACTIVE
+## Operation SMA-ACTIVE
+
+- Ubuntu Server 18.04 LTS -> Debian 10 Buster
+- Change Matrix & Riot.im to Rocket.chat & Jitsi Meet
+- Apache or Nginx, that is the question...
+- PostgreSQL or MongoDB ?
+- config_vps_server.sh - usage of git for conf files.
+- UFW OK
 
 - Docker
 - Let's Encrypt : Elliptic Curve
