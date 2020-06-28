@@ -2,18 +2,16 @@
 # ================================================================
 # Title : Postinstall Ubuntu Perso
 # Author : Guillaume Nibert
-# Version : 2.0
+# Version : 2.1
 # Compatibility : Ubuntu 18.04 LTS, 18.10, 19.04, 19.10, 20.04 LTS
 # Comments : The script runs in sudo mode.
 # ================================================================
 # Changelog
 #
-#     Security :
-#       - Removed Discord, Skype and Riot.im.
-#       - Added Flatpak packages.
-#     Development :
-#       - Added Jetbrains CLion, PyCharm and IDEA snap packages.
-#     Compatibility : Added Ubuntu 20.04 LTS support.
+#     Security (transfer from snap to flatpak) :
+#       - Removed Mattermost, Jetbrains PyCharm and IntelliJ IDEA
+#     Photography :
+#       - Removed Glimpse
 # ================================================================
 
 
@@ -54,24 +52,24 @@ add-apt-repository ppa:obsproject/obs-studio -y
 ## Veracrypt
 add-apt-repository ppa:unit193/encryption -y
 
+## Blender
+add-apt-repository ppa:thomas-schiex/blender -y
+
 # Update of the package lists
 apt update
 
 # Installation of the following packages
 apt install audacity mumble vlc codium libreoffice libreoffice-l10n-fr libreoffice-help-fr \
-thunderbird thunderbird-locale-fr filezilla brave-browser balena-etcher-electron default-jre \
+thunderbird thunderbird-locale-fr filezilla brave-browser balena-etcher-electron default-jre default-jdk \
 synaptic cheese flatpak gufw handbrake chrome-gnome-shell gnome-clocks keepassxc lutris \
 mkvtoolnix mkvtoolnix-gui ffmpeg obs-studio qbittorrent rhythmbox totem totem-plugins \
-veracrypt virtualbox virtualbox-qt virtualbox-dkms torbrowser-launcher -y
+veracrypt virtualbox virtualbox-qt virtualbox-dkms torbrowser-launcher hexchat -y
 
 # Development tools in Python, C, C++ and Java
 apt install python3 gcc g++ default-jdk -y
 
 # Snap packages
 snap refresh
-snap install mattermost-desktop glimpse-editor
-snap install intellij-idea-ultimate --classic
-snap install pycharm-professional --classic
 snap install clion --classic
 
 # Comments
