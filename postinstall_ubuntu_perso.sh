@@ -2,7 +2,7 @@
 # ================================================================
 # Title : Postinstall Ubuntu Perso
 # Author : Guillaume Nibert
-# Version : 2.1
+# Version : 2.1.1
 # Compatibility : Ubuntu 18.04 LTS, 18.10, 19.04, 19.10, 20.04 LTS
 # Comments : The script runs in sudo mode.
 # ================================================================
@@ -63,7 +63,7 @@ apt install audacity mumble vlc codium libreoffice libreoffice-l10n-fr libreoffi
 thunderbird thunderbird-locale-fr filezilla brave-browser balena-etcher-electron default-jre default-jdk \
 synaptic cheese flatpak gufw handbrake chrome-gnome-shell gnome-clocks keepassxc lutris \
 mkvtoolnix mkvtoolnix-gui ffmpeg obs-studio qbittorrent rhythmbox totem totem-plugins \
-veracrypt virtualbox virtualbox-qt virtualbox-dkms torbrowser-launcher hexchat -y
+veracrypt virtualbox virtualbox-qt virtualbox-dkms torbrowser-launcher hexchat cpufrequtils -y
 
 # Development tools in Python, C, C++ and Java
 apt install python3 gcc g++ default-jdk -y
