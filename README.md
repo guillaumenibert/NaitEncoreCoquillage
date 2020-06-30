@@ -57,3 +57,12 @@ Unbound DNS Server + DNS over TLS
 ## NVIDIA & Nouveau driver
 
 add (press "e", grub) : `nouveau.modeset=0 modprobe.blacklist=nouveau` after `quiet splash`
+then esc > ubuntu > esc > advanced options > recovery mode
+press "network" then "root"
+then :
+```bash
+sudo add-apt-repository ppa:graphics-drivers/ppa
+```
+```bash
+sudo apt install nvidia-driver-XXX  # XXX = version number
+```
