@@ -53,3 +53,7 @@ Unbound DNS Server + DNS over TLS
 - OAuth
 - NVIDIA Jetson
 - Update scripts
+
+## NVIDIA & Nouveau driver
+
+add (press "e", grub) : `nouveau.modeset=0 modprobe.blacklist=nouveau` after `quiet splash`
