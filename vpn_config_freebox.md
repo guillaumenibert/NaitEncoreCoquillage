@@ -7,7 +7,7 @@
 | Auteur               | Version | Date         | Historique des modifications |
 | -------------------- | ------- | ------------ | ---------------------------- |
 | Guillaume Nibert     | 0.1.0   | 2020-10-04   | Première version du tutoriel |
-| Guillaume Nibert     | 0.1.1   | 2020-10-04   | Fix commentaires ipsec.conf  |
+| Guillaume Nibert     | 0.1.1   | 2020-10-06   | Fix commentaires ipsec.conf  |
 
 </div>
 
@@ -134,7 +134,8 @@ config setup
 
 # Add connections here.
 
-conn freebox  # nom de la connexion
+# nom de la connexion
+conn freebox
         keyexchange=ikev2
         dpdaction=clear
         dpddelay=300s
