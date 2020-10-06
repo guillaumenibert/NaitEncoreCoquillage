@@ -7,6 +7,7 @@
 | Auteur               | Version | Date         | Historique des modifications |
 | -------------------- | ------- | ------------ | ---------------------------- |
 | Guillaume Nibert     | 0.1.0   | 2020-10-04   | Première version du tutoriel |
+| Guillaume Nibert     | 0.1.1   | 2020-10-04   | Fix commentaires ipsec.conf  |
 
 </div>
 
@@ -137,15 +138,18 @@ conn freebox  # nom de la connexion
         keyexchange=ikev2
         dpdaction=clear
         dpddelay=300s
-        eap_identity="VpnUser"  # le login de l'utilisateur
+        # le login de l'utilisateur
+        eap_identity="VpnUser"
         leftauth=eap-mschapv2
         left=%defaultroute
         leftsourceip=%config
-        right=vpn.example.org  # le domaine associé
+        # le domaine associé
+        right=vpn.example.org
         rightauth=pubkey
         rightsubnet=0.0.0.0/0
         rightid=%SERVER
-        rightcert=0001_chain.pem  # le chemin vers le certificat fullchain
+        # le chemin vers le certificat fullchain (rem : faire un chmod 600 si nano en root)
+        rightcert=0001_chain.pem
         type=tunnel
         auto=add
 
