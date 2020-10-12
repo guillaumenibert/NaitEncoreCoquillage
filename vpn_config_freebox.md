@@ -9,6 +9,7 @@
 | Guillaume Nibert     | 0.1.0   | 2020-10-04   | Première version du tutoriel    |
 | Guillaume Nibert     | 0.1.1   | 2020-10-06   | Fix commentaires ipsec.conf     |
 | Guillaume Nibert     | 0.2.0   | 2020-10-11   | Ajout recommandation empirique  |
+| Guillaume Nibert     | 0.3.0   | 2020-10-12   | Ajout routage des paquets IP    |
 
 </div>
 
@@ -205,3 +206,5 @@ Vous êtes connecté·e !
 * IPsec/IKEv2 opère sur la couche 3 du modèle TCP/IP à la différence d'OpenVPN qui opère sur les couches 5 et 6, les deux sécurisent les données dans leurs couches respectives, plus d'infos : https://security.stackexchange.com/questions/105967/ikev2-vs-openvpn.
 
 * Si la connexion ne fonctionne pas du premier coup (IKE AUTHENTIFICATION FAILED) essayer sur un nom de domaine example.freeboxos.fr et revenir le nom domaine vpn.example.org précédemment configuré.
+
+* Vérifier que l'IP Forwarding est bien en place, l'activer : `sysctl -w net.ipv4.ip_forward=1`
