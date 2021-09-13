@@ -82,3 +82,5 @@ https://vive-gnulinux.fr.cr/securiser-firefox/
 https://privacymachine.xyz/
 
 https://textup.fr/277731WL (credits : LBD22)
+
+https://github.com/arkenfox/user.js (user.js template for Firefox)
