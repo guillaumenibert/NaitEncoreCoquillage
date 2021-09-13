@@ -66,3 +66,9 @@ sudo add-apt-repository ppa:graphics-drivers/ppa
 ```bash
 sudo apt install nvidia-driver-XXX  # XXX = version number
 ```
+
+## Enable nested virtualisation on Virtualbox for Linux
+
+```bash
+VBoxManage modifyvm "VM Name" --nested-hw-virt on
+```
